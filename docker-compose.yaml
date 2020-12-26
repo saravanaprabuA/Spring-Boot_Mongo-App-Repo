@@ -1,0 +1,29 @@
+version: '3'
+services:
+    angular-app:
+       image: saravanaprabua/spring-boot-angular-client:v1
+       container_name: angular-app
+       ports:
+         - "5000:80"       
+    springboot-app:
+       build: .
+       image: custom-springboot-app
+       container_name: springboot-app
+       environment:
+        - SERVER_PORT=8888
+        - MONGODB_URI=mongodb://mymongo:27017/EmployeeDB
+        - MONGODB_STATUS_HOST=mymongo
+        - MONGODB_STATUS_PORT=28017       
+       ports:
+        - "8888:8888"
+       depends_on:
+        - mymongo
+       links:
+        - mymongo 
+    mymongo:
+       image: mongo:latest
+       container_name: mongo-db
+       volumes:
+         - ./data:/data/db
+       ports:
+         - "27017:27017"        
