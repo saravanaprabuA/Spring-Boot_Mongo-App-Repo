@@ -1,0 +1,44 @@
+  javainuse.com/devOps/docker/docker-compose-tutorial
+
+1.https://www.youtube.com/watch?v=ZZ2Llh4NhaY
+2.https://github.com/techtter/scrum-board
+
+---------------------------
+F:\Technology\YoutubeDownloader\Docker\Docker-Compose
+Deploying Spring Boot and MongoDB as Containers Using Docker and Docker Compose:
+
+---------------
+Git: 
+https://docs.docker.com/compose/compose-file/compose-file-v3/#build
+E:\DevOps\Spring-boot-mogo-Repo>docker-compose config
+
+docker-compose.yaml
+
+To verify the file
+docker-compose config
+
+docker-compose up -d 
+
+docker ps -a
+
+docker-compose down
+
+docker ps -a
+e:\DevOps\DockerComposeFile>docker-compose up -d
+e:\DevOps\DockerComposeFile>docker-compose down
+Stopping springboot-app ... done                                                                                        
+Stopping angular-app    ... done                                                                                        
+Stopping mongo-db       ... done                                                                                        
+Removing springboot-app ... done                                                                                        
+Removing angular-app    ... done                                                                                        
+Removing mongo-db       ... done                                                                                        
+Removing network dockercomposefile_default
+
+e:\DevOps\DockerComposeFile>                  
+
+----------------------------
+Angular+Spring-boot+Mongodb
+Test
+http://192.168.99.100:5000
+
+
